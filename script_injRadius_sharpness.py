@@ -1,4 +1,7 @@
-# @author:
+# @author: Jakob Stoye, Institute for Numerical Analysis, TU Braunschweig
+#          jakob.stoye@tu-braunschweig.de
+#
+# Associated with the publication
 #
 # Conducting experiments on the sharpness of the bound on the injectivity radius of the Stiefel manifold
 
