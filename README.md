@@ -19,4 +19,5 @@ associated to the publication
   R. Zimmermann, K. H\"uper.
   "Computing the Riemannian logarithm on the Stiefel manifold: metrics, methods and performance", 
   arXiv:2103.12046, March 2022
+  
 as they contain functions for the Stiefel Exponential and Stiefel Logarithm.
