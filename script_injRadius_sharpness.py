@@ -21,6 +21,7 @@ import import_ipynb
 
 import Stiefel_Exp_Log                as StEL
 import Stiefel_Aux        as StAux
+import RandomTangVec        as RandTV
 
 
 
@@ -56,7 +57,7 @@ def Test_Rank_Log(n,p,mu_list,runs):
         Delta_list = np.zeros((p,n,p))
 
         for i in range(p):
-            Delta_list[i,:,:] = StEL.create_random_rank_TangentVec(U0,i+1)
+            Delta_list[i,:,:] = RandTV.create_random_rank_TangentVec(U0,i+1)
         #end for i
 
         for j in range(p):
