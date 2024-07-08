@@ -176,11 +176,49 @@ print(min_mu)
 cutpoints = add_elOverMu(d,const_rel)
 plt.plot(mu_list, cutpoints)
 
-#plt.xlabel('geodesic length')
-plt.xlabel('μ')
-plt.ylabel('rel num')
+plt.xlabel('geodesic length')
+#plt.xlabel('μ')
+#plt.ylabel('rel num')
+plt.ylabel('rel number of reached cut points')
 
 plt.show()
+
+
+#detail plot
+
+cutpoints = add_elOverMu(d,const_rel)
+plt.plot(mu_list[0:5], cutpoints[0:5])
+plt.xticks(np.arange(mu_list[0], mu_list[5], 0.005))
+
+plt.xlabel('geodesic length')
+#plt.xlabel('μ')
+#plt.ylabel('rel num')
+plt.ylabel('rel number of reached cut points')
+
+plt.show()
+
+
+
+f, axs = plt.subplots(1, 2, figsize=(14, 6.5), gridspec_kw={'width_ratios': [2.5, 1.5]})
+axs[0].plot(mu_list, cutpoints,color=[0,0.2,0.8])
+axs[0].set_xlabel('geodesic length',fontsize=13.5)
+axs[0].set_ylabel('rel number of reached cut points',fontsize=13.5)
+axs[0].grid(True)
+axs[0].axis([2.86,2.9525,0,0.069])
+#drawObject = Circle((2.87,0.0001), radius=0.005, fill=False, color="black")
+#axs[0].add_patch(drawObject)
+axs[0].annotate('zoom in', xy=(2.87175, 0.0004), xytext=(2.926, 0.0125),
+             arrowprops=dict(facecolor='black', width=1, headwidth=5, headlength=20),fontsize=12)
+
+
+axs[1].plot(mu_list[0:5], cutpoints[0:5],color=[0,0.2,0.8])
+axs[1].set_xlabel('geodesic length', fontsize=13.5)
+axs[1].grid(True)
+axs[1].axis([2.86,2.88,0,0.0053])
+#axs[1].set_xticks(np.arange(2.86,2.88,0.0025),labels=['2.860','','2.865','','2.870','','2.875','','2.880'])
+axs[1].set_xticks(np.arange(2.86,2.88,0.005))#,labels=['2.860','','2.865','','2.870','','2.875','','2.880'])
+
+f.tight_layout(pad=2.5)
 
 
 
@@ -223,10 +261,12 @@ plt.show()
 
 #relative number of reached cut points sorted by different ranks of the tangent vectors
 
-plt.plot(range(1,pmax+1), add_elOverRank(d,ranks))
+plt.plot(range(1,pmax+1), add_elOverRank(d,ranks),color=[0,0.2,0.8])
 
 plt.xlabel('rank')
 plt.xticks(range(1,pmax+1))
-plt.ylabel('rel num')
+plt.ylabel('rel number of reached cut points')
+plt.axis([0.95, 15.2, 0, 0.395])
+plt.grid(True)
 
 plt.show()
