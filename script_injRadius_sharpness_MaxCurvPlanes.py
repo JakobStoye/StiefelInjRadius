@@ -195,10 +195,13 @@ print(min_mu)
 
 
 #relative number of reached cut points sorted by different distances mu
-plt.plot(mu_list, add_elOverMu(d,const_rel))
+plt.plot(mu_list, add_elOverMu(d,const_rel),color=[0,0.2,0.8])
 
-#plt.xlabel('geodesic length')
-plt.xlabel('μ')
-plt.ylabel('rel num')
+plt.xlabel('geodesic length')
+#plt.xlabel('μ')
+#plt.ylabel('rel num')
+plt.ylabel('rel number of reached cut points')
+plt.axis([2.86, 2.953, 0, 0.275])
+plt.grid(True)
 
 plt.show()
