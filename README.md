@@ -22,6 +22,6 @@ associated to the publication
 
   R. Zimmermann, K. H\"uper
   "Computing the Riemannian Logarithm on the Stiefel Manifold: Metrics, Methods and Performance", 
-  doi.org/10.1137/21M1425426, 2022.
+  doi.org/10.1137/21M1425426, 2022
   
 as they contain functions for the Stiefel Exponential and Stiefel Logarithm.
