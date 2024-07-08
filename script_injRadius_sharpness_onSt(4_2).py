@@ -187,7 +187,7 @@ tau = 1.0e-12
 
 #Conducting experiments
 
-for n in range(4,51):#51
+for n in range(4,51):
     print(f"######{n}######")
     mu = 3.2
     i=0
@@ -231,15 +231,16 @@ for n in range(4,51):#51
 
 
 
+
 #plot smallest distance of points to which a shorter geodesic existed
 
 myList = mu_ns.items()
 myList = sorted(myList) 
 x, y = zip(*myList) 
 
-plt.xlim(4,50)
-plt.ylim(2.81,2.9)
 plt.xlabel("n")
-plt.ylabel('μ')
-plt.plot(x, y)
+plt.ylabel('geodesic length')
+plt.plot(x, y, color=[0, 0.2, 0.8])
+plt.grid(True)
+plt.axis([4,50.3, 2.81, 2.9])
 plt.show()
